@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+html{
+  
+    background-image:linear-gradient(270deg,rgba(242,159,5,1) 39%, rgba(197,65,4,1) 65%, rgba(191,54,4,1) 78%, rgba(136,39,3,1) 93%);
+ 
+   
+}
+
+
+  
+   
+h1{
+  --angle:0deg;
+  border-style:solid;
+  border-width:0;
+  border-left-width: 0.15em;
+  border-bottom-width: 0.18em;
+  border-image: linear-gradient(var(--angle),#f29f05,#bf3604,#882703,#591902) 1;
+  
+
+animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+to {
+  --angle: 360deg;
+}
+}
+
+@property --angle {
+syntax: '<angle>';
+initial-value: 0deg;
+inherits: false;
+}
+
+
+
+
+.container{
+  margin: 100px auto;
+  display: flex;
+  background-color: #FFFFFF;
+  width: 80%;
+  max-width: 1200px;
+  height: 300px; ;
+min-height:500px ;
+border: none;
+outline: none;
+  
+}
+
+.container1{
+flex: 2;
+
+border: none;
+outline: none;
+padding: 50px;
+
+}
+.container2{
+  flex: 5;
+  overflow-y:scroll;
+}
+
+.block{
+  display: block;
+  padding: 20px;
+}
+p{
+  font-size: medium;
+}
+label{
+  font-size: 1.1em;
+}
+.picture{
+ 
+ 
+  border: 1px solid brown;
+  background: 
+    url(/css/media/bg2.jpg) 
+    left/ /* on the left */
+    100% 100%  /* take only 60% of width */
+    no-repeat ;
+    background-size:cover ;
+    background-position: center;
+    backdrop-filter: blur(5px);
+    
+}
+
+/*************************************************** button style **********************************/
+/* CSS */
+.center{
+  justify-content: center;
+}
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+
+    #f29f05,
+    #F28705,
+    #c54104,
+    #882703,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+ /*******************************************************card style*********************************/
+ .card {
+    margin: 20px auto;
+    padding: 25px;
+    width: 250px;
+    min-height: 30px;
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.8) ;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+    color:black;
+    
+  }
+  
+
+.card:hover {
+  --spread: 20px;
+  box-shadow:  5px -5px var(--spread) 0px #bf3604, 5px 0 var(--spread) 0px #FD1D1D, 5px 5px var(--spread) 0px #F77737, 0 5px var(--spread) 0px #FCAF45, -5px 5px var(--spread) 0px #FFDC80;
+  transform: translateY(-5px);
+  transition: all .5s ease-in-out;
+}
+/************************************ scroll bar ***************************************/
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+
+/************************************ check box ***************************************/
+   
+  /* Hide the default checkbox */
+  .check-container input[type='checkbox']{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+   }
+   
+   .check-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    padding-right: 8px;
+   }
+   
+   /* Create a custom checkbox */
+   .checkmark {
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background: black;
+    border-radius: 50px;
+    transition: all 0.7s;
+    --spread: 20px;
+   }
+   
+   /* When the checkbox is checked, add a blue background */
+   .check-container input[type='checkbox']:checked ~ .checkmark {
+    background: black;
+    
+  box-shadow: 5px -5px var(--spread) 0px #882703, 5px 0 var(--spread) 0px #E1306C, 5px 5px var(--spread) 0px #F77737, 0 5px var(--spread) 0px #FCAF45, -5px 5px var(--spread) 0px #FFDC80;
+   }
+   
+   /* Create the checkmark/indicator (hidden when not checked) */
+   .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+   }
+   
+   /* Show the checkmark when checked */
+   .check-container input[type='checkbox']:checked ~ .checkmark:after {
+    display: block;
+   }
+   
+   /* Style the checkmark/indicator */
+   .check-container .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid #f0f0f0;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+   }
+   .block{
+    display: block;
+   }
+.inline{
+    display: inline-block;
+   
+}

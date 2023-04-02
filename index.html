@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stith Mod3:Assignment</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <main>
+
+
+        <div class="container">
+            <div class="container1">
+
+
+
+                <form action="javascript:restaurantSelector()">
+
+                    <div class="block">
+                        <h1>Restaurant Selector </h1>
+                    </div>
+                    <div class="block">
+
+                        <div class="inline">
+
+                            <label class="check-container">
+                                <input type="checkbox" id="isGlutenFreeInput">
+                                <div class="checkmark"></div>
+                            </label>
+
+                        </div>
+
+                        <label for="isGlutenFreeInput">Do you need Gluten free options?</label>
+                    </div>
+
+                    <div class="block">
+                        <div class="inline">
+                        <label class="check-container">
+                            <input type="checkbox" id="isVeganInput">
+                            <div class="checkmark"></div>
+                        </label>
+                    </div>
+
+                        <label for="isVeganInput">Do you need Vegan options?</label>
+                    </div>
+
+                    <div class="block">
+                        <div class="inline">
+                            <label class="check-container">
+                        <input type="checkbox" id="isLocalInput">
+                        <div class="checkmark"></div>
+                    </label>
+                    </div>
+                        <label for="isLocalInput">Do you want local options?</label>
+                    </div>
+
+                    <div class="block">
+                        <!--
+                        <input class="button-85" type="submit" value="filter">
+                        -->
+                        <div class="center">
+                        <button id="submit" class="button-85" role="button">filter</button>
+                        <button id="reset" class="button-85" role="button">reset</button>
+                    </div>
+                    </div>
+
+            </div>
+            </form>
+
+
+
+
+
+            <div id="result" class="container2 picture">
+                
+            </div>
+        
+
+        </div>
+
+    </main>
+     <script src="/js/eventListner.js"></script>
+    <!--<script src="/js/main.js"></script>  -->
+</body>
+
+</html>
